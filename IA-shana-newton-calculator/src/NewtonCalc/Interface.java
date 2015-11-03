@@ -31,7 +31,7 @@ public class Interface extends javax.swing.JFrame {
     public Interface() {
         
         initComponents();
-        clearImages();
+        //clearImages();
         
         persistor = new Persistor();
         
@@ -112,54 +112,71 @@ public class Interface extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         gLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         gLabel.setText("Univ. G Constant");
+        getContentPane().add(gLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 272, -1, -1));
 
         inputLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         inputLabel.setText("Input");
+        getContentPane().add(inputLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 60, 30));
 
         initVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         initVelLabel.setText("Initial Velocity");
+        getContentPane().add(initVelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 215, -1, -1));
 
         radiusLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         radiusLabel.setText("Radius of Planet");
+        getContentPane().add(radiusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, -1, -1));
 
         radiusField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radiusFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(radiusField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 120, 83, 36));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel5.setText("Mass of Planet");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
 
         titleLabel.setFont(new java.awt.Font("Lucida Grande", 0, 22)); // NOI18N
         titleLabel.setText("Newton's Cannonball Calculator");
+        getContentPane().add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        getContentPane().add(inputSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 50, 530, -1));
 
         MassPowField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MassPowFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(MassPowField, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 80, 40, 36));
 
         gField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(gField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 83, 36));
 
         initVelField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 initVelFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(initVelField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 83, 36));
 
         outputLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         outputLabel.setText("Output");
+        getContentPane().add(outputLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 70, 30));
+        getContentPane().add(outputSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 230, 520, -1));
 
         orbitVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         orbitVelLabel.setText("Orbital Velocity");
+        getContentPane().add(orbitVelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 274, -1, -1));
 
         orbitVelField.setBackground(new java.awt.Color(204, 204, 204));
         orbitVelField.addActionListener(new java.awt.event.ActionListener() {
@@ -167,9 +184,11 @@ public class Interface extends javax.swing.JFrame {
                 orbitVelFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(orbitVelField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 264, 83, 36));
 
         escVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         escVelLabel.setText("Escape Velocity");
+        getContentPane().add(escVelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 314, -1, -1));
 
         escVelField.setBackground(new java.awt.Color(204, 204, 204));
         escVelField.addActionListener(new java.awt.event.ActionListener() {
@@ -177,9 +196,11 @@ public class Interface extends javax.swing.JFrame {
                 escVelFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(escVelField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 304, 83, 36));
 
         gForceLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         gForceLabel.setText("Gravitational Force");
+        getContentPane().add(gForceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 354, -1, -1));
 
         gForceField.setBackground(new java.awt.Color(204, 204, 204));
         gForceField.addActionListener(new java.awt.event.ActionListener() {
@@ -187,9 +208,11 @@ public class Interface extends javax.swing.JFrame {
                 gForceFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(gForceField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 344, 83, 36));
 
         trajTypeLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         trajTypeLabel.setText("Trajectory Type");
+        getContentPane().add(trajTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 394, -1, -1));
 
         trajTypeField.setBackground(new java.awt.Color(204, 204, 204));
         trajTypeField.setToolTipText("skdljflkdsjflksdj");
@@ -198,6 +221,7 @@ public class Interface extends javax.swing.JFrame {
                 trajTypeFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(trajTypeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 384, 130, 36));
 
         calcButton.setText("Calculate");
         calcButton.addActionListener(new java.awt.event.ActionListener() {
@@ -205,23 +229,32 @@ public class Interface extends javax.swing.JFrame {
                 calcButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(calcButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 90, 40));
 
         pathTypeLabel.setText("Path Type");
+        getContentPane().add(pathTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
 
         gUnitLabel.setText("N⋅m2/kg2");
+        getContentPane().add(gUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
 
         initVelUnitLabel.setText("m/s");
+        getContentPane().add(initVelUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jLabel19.setText("x 10^");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 88, -1, 20));
 
         radiusUnitLabel.setText("km");
+        getContentPane().add(radiusUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, -1, -1));
 
         orbitVelUnitLabel.setText("m/s");
+        getContentPane().add(orbitVelUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 274, -1, -1));
 
         escVelUnitLabel.setText("m/s");
+        getContentPane().add(escVelUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 314, -1, -1));
 
         gForceUnitLabel.setText("N");
+        getContentPane().add(gForceUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 354, -1, -1));
 
         viewPrevButton.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         viewPrevButton.setText("View Previous Entries");
@@ -230,221 +263,32 @@ public class Interface extends javax.swing.JFrame {
                 viewPrevButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(viewPrevButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 458, 152, 40));
 
         MassBaseField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MassBaseFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(MassBaseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, 40, 36));
 
         jLabel24.setText("kg");
+        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(583, 88, -1, 20));
 
-        fallImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Desktop/cs ia files/IA-shana-newton-calculator/fallback.png")); // NOI18N
+        fallImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/fallback.png")); // NOI18N
         fallImage.setText("jLabel17");
-
-        orbitImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Desktop/cs ia files/IA-shana-newton-calculator/orbit.png")); // NOI18N
-        orbitImage.setText("jLabel17");
-
-        escImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Desktop/cs ia files/IA-shana-newton-calculator/exorbit.png")); // NOI18N
-        escImage.setText("jLabel17");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(titleLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addComponent(inputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(initVelLabel)
-                        .addGap(45, 45, 45)
-                        .addComponent(initVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(initVelUnitLabel)
-                        .addGap(54, 54, 54)
-                        .addComponent(jLabel5)
-                        .addGap(22, 22, 22)
-                        .addComponent(MassBaseField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel19)
-                        .addGap(6, 6, 6)
-                        .addComponent(MassPowField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel24))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(gLabel)
-                        .addGap(26, 26, 26)
-                        .addComponent(gField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(gUnitLabel)
-                        .addGap(13, 13, 13)
-                        .addComponent(radiusLabel)
-                        .addGap(10, 10, 10)
-                        .addComponent(radiusField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(radiusUnitLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(calcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(69, 69, 69)
-                                .addComponent(outputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitVelLabel)
-                            .addComponent(escVelLabel)
-                            .addComponent(gForceLabel)
-                            .addComponent(trajTypeLabel))
-                        .addGap(6, 6, 6)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(orbitVelUnitLabel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(escVelUnitLabel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(7, 7, 7)
-                                .addComponent(gForceUnitLabel))
-                            .addComponent(trajTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(pathTypeLabel))
-                            .addComponent(fallImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(orbitImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(escImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(19, 19, 19))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(titleLabel)
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(inputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(initVelLabel))
-                    .addComponent(initVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(initVelUnitLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel5))
-                    .addComponent(MassBaseField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(MassPowField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(gField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(radiusField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(gLabel)
-                            .addComponent(gUnitLabel)
-                            .addComponent(radiusLabel)
-                            .addComponent(radiusUnitLabel))))
-                .addGap(14, 14, 14)
-                .addComponent(calcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(outputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(orbitVelLabel)
-                        .addGap(23, 23, 23)
-                        .addComponent(escVelLabel)
-                        .addGap(23, 23, 23)
-                        .addComponent(gForceLabel)
-                        .addGap(23, 23, 23)
-                        .addComponent(trajTypeLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(orbitVelUnitLabel)))
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(escVelUnitLabel)))
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(gForceUnitLabel)))
-                        .addGap(4, 4, 4)
-                        .addComponent(trajTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pathTypeLabel)
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fallImage)
-                            .addComponent(orbitImage)
-                            .addComponent(escImage))))
-                .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
+        getContentPane().add(fallImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, 170, -1));
         fallImage.getAccessibleContext().setAccessibleName("fallImage");
+
+        orbitImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Desktop/3jCw9AA - Imgur.gif")); // NOI18N
+        orbitImage.setText("jLabel17");
+        getContentPane().add(orbitImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 170, -1));
         orbitImage.getAccessibleContext().setAccessibleName("orbitImage");
         orbitImage.getAccessibleContext().setAccessibleDescription("");
+
+        escImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/exorbit.png")); // NOI18N
+        escImage.setText("jLabel17");
+        getContentPane().add(escImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 270, 170, -1));
         escImage.getAccessibleContext().setAccessibleName("escImage");
 
         pack();
