@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Test()
+comment1.params=songCount
+comment1.target=void\ addSongs(int)
+comment1.text=\n\ for\ exercise\ 4.\ Adds\ 100\ songs\ to\ the\ array\ list.\n
+comment2.params=search
+comment2.target=java.lang.String\ probem4B(java.lang.String)
+comment3.params=search
+comment3.target=java.lang.String\ probem4C(java.lang.String)
+numComments=4

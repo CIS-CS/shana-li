@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Test()
+comment1.params=songNum
+comment1.target=void\ populate(int)
+comment2.params=
+comment2.target=void\ problem4D()
+comment2.text=\n\ For\ exercise\ 4d\:\ "Create\ the\ Test\ class;\ from\ its\ test(\ )\ method\ add\ 100\ Tracks\ to\ the\ organizer.\ \n\ Display\ the\ tracks\ in\ the\ terminal\ window.\ "\n
+comment3.params=
+comment3.target=void\ problem4F43()
+comment3.text=\n\ For\ exercise\ 4f\:\ "Play\ a\ random\ track."\n
+comment4.params=numOfTracks
+comment4.target=void\ problem4F44(int)
+comment4.text=\n\ For\ exercise\ 4f\:\ "Play\ multiple\ tracks\ in\ a\ random\ order."\n
+comment5.params=numOfTracks
+comment5.target=void\ problem4F45(int)
+comment5.text=\n\ For\ exercise\ 4f\:\ "Play\ every\ track\ in\ the\ list\ exactly\ once,\ in\ a\ random\ order."\n
+numComments=6

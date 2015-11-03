@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Picture()
+comment0.text=\n\ Constructors\ for\ objects\ of\ class\ Picture\n
+comment1.params=
+comment1.target=void\ draw()
+comment1.text=\n\ Draws\ this\ picture.\n
+comment2.params=
+comment2.target=void\ sunset()
+comment2.text=\n\ Makes\ the\ sun\ move\ down\ and\ off\ the\ screen,\ simulating\ rather\ inaccurately\ the\ phenomenon\ of\ a\ sunset.\n
+comment3.params=
+comment3.target=void\ setBlackAndWhite()
+comment3.text=\n\ Changes\ this\ picture\ to\ black/white\ display.\n
+comment4.params=
+comment4.target=void\ setColor()
+comment4.text=\n\ Changes\ this\ picture\ to\ use\ color\ display.\n
+numComments=5
