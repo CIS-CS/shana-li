@@ -12,34 +12,47 @@ package NewtonCalc;
  */
 public class Ball {
     
-    private static double initialVel = 0;
-    private static String pathType = "";
+    private double initVel = 0;
+    private String pathType = "";
     
     public Ball(double initVel) {
-        calcPathType(initVel);
+        this.initVel = initVel;
     }
     
-    public static String getPathType() {
+    public Ball(double initVel, String pathType) {
+        this.initVel = initVel;
+        this.pathType = pathType;
+    }
+    
+    public String getPathType() {
         return pathType;
     }
     
-    public static double getInitialVel() {
-        return initialVel;
+    public double getInitVel() {
+        return initVel;
     }
     
-    private String calcPathType(double initVel) {
+    public void setPathType(String newPathType) {
+        this.pathType = newPathType;
+    }
+    
+    public void setInitVel(double newInitVel) {
+        this.initVel = newInitVel;
+    }
+    
+    public void calcPathType(double initVel, double escVel, double orbitVel) {
         String path = "";
         
-        if(initVel < Planet.getEscVel() && initVel != Planet.getOrbitVel()){
-            path = "Fall Back";
-        } else if (initVel == Planet.getOrbitVel()) {
+        if(initVel < escVel && initVel >= orbitVel) {
             path = "Orbit";
-        } else if (initVel > Planet.getEscVel()){
+        } 
+        else if (initVel < orbitVel) {
+            path = "Fall Back";
+        } 
+        else if (initVel >= escVel) {
             path = "Escape";
         }
         
-        Ball.pathType = path;
-        
-        return path;
+        setPathType(path);
     }
 }
