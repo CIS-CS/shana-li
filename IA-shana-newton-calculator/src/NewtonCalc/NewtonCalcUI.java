@@ -175,7 +175,7 @@ public class NewtonCalcUI extends javax.swing.JFrame {
         trajTypeField.setToolTipText("Whether the projectile falls back to the planet, orbits the planet, or escapes orbit.");
 
         calcButton.setText("Calculate");
-        calcButton.setToolTipText("");
+        calcButton.setToolTipText("Calculate!!");
         calcButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calcButtonActionPerformed(evt);
@@ -183,6 +183,7 @@ public class NewtonCalcUI extends javax.swing.JFrame {
         });
 
         pathTypeLabel.setText("Path Type");
+        pathTypeLabel.setToolTipText("The path that the projectile takes.");
 
         gUnitLabel.setText("N⋅m2/kg2");
 
@@ -214,12 +215,15 @@ public class NewtonCalcUI extends javax.swing.JFrame {
 
         fallImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/fallback.png")); // NOI18N
         fallImage.setText("jLabel17");
+        fallImage.setToolTipText("The ball will fall back to the planet's surface.");
 
         orbitImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/orbit.png")); // NOI18N
         orbitImage.setText("jLabel17");
+        orbitImage.setToolTipText("The ball will orbit around the planet.");
 
         escImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/exorbit.png")); // NOI18N
         escImage.setText("jLabel17");
+        escImage.setToolTipText("The ball will escape orbit, never to be seen again.");
 
         gPowField.setToolTipText("The Universal Gravitational Constant of the planet. On Earth it is about 6.67 x 10^-11.");
 
@@ -285,35 +289,36 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(orbitVelLabel)
+                            .addComponent(escVelLabel)
+                            .addComponent(gForceLabel)
+                            .addComponent(trajTypeLabel))
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(orbitVelLabel)
-                                    .addComponent(escVelLabel)
-                                    .addComponent(gForceLabel)
-                                    .addComponent(trajTypeLabel))
-                                .addGap(11, 11, 11)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(orbitVelField, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(escVelField, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))
-                                    .addComponent(gForceField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(trajTypeField, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(gForceUnitLabel)
-                                        .addComponent(escVelUnitLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addComponent(orbitVelUnitLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(103, 103, 103)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(50, 50, 50)
-                                        .addComponent(pathTypeLabel))
-                                    .addComponent(orbitImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(fallImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(escImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(1, 1, 1)
+                                .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(trajTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(orbitVelUnitLabel)
+                            .addComponent(escVelUnitLabel)
+                            .addComponent(gForceUnitLabel))
+                        .addGap(101, 101, 101)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(pathTypeLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(escImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fallImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(orbitImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(6, 6, 6))
         );
         layout.setVerticalGroup(
@@ -390,33 +395,29 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                         .addComponent(trajTypeLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(orbitVelUnitLabel)))
+                        .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(escVelUnitLabel)
-                            .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(gForceUnitLabel)))
+                        .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)
                         .addComponent(trajTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(orbitVelUnitLabel)
+                        .addGap(24, 24, 24)
+                        .addComponent(escVelUnitLabel)
+                        .addGap(24, 24, 24)
+                        .addComponent(gForceUnitLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(pathTypeLabel)
                         .addGap(4, 4, 4)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitImage)
+                            .addComponent(escImage)
                             .addComponent(fallImage)
-                            .addComponent(escImage))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(orbitImage))))
                 .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addGap(19, 19, 19))
         );
 
         fallImage.getAccessibleContext().setAccessibleName("fallImage");
@@ -531,24 +532,6 @@ public class NewtonCalcUI extends javax.swing.JFrame {
         }
     }
        
-    private void calcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcButtonActionPerformed
-        try {
-            checkValues();
-            clearImages(); 
-            Universe universe = new Universe(initVel, g, massBase, massPow, mass, radius);
-            displayValues(universe);
-            queue.add(universe);
-        } 
-        catch (Exception ex) {
-            Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_calcButtonActionPerformed
-
-    private void viewPrevButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPrevButtonActionPerformed
-        JOptionPane.showMessageDialog(null, queue.toString(), "Previous Entries",
-        JOptionPane.PLAIN_MESSAGE);        
-    }//GEN-LAST:event_viewPrevButtonActionPerformed
-
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         int choice = JOptionPane.showConfirmDialog(this,
         "Are you sure you want to exit?", "Exit Application",
@@ -578,6 +561,24 @@ public class NewtonCalcUI extends javax.swing.JFrame {
         else {
         }
     }//GEN-LAST:event_formWindowClosing
+
+    private void viewPrevButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPrevButtonActionPerformed
+        JOptionPane.showMessageDialog(null, queue.toString(), "Previous Entries",
+            JOptionPane.PLAIN_MESSAGE);
+    }//GEN-LAST:event_viewPrevButtonActionPerformed
+
+    private void calcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcButtonActionPerformed
+        try {
+            checkValues();
+            clearImages();
+            Universe universe = new Universe(initVel, g, massBase, massPow, mass, radius);
+            displayValues(universe);
+            queue.add(universe);
+        }
+        catch (Exception ex) {
+            Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_calcButtonActionPerformed
 
     
     /**

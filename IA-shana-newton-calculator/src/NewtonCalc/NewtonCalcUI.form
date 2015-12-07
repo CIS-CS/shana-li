@@ -41,6 +41,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,4,0,0,2,-121"/>
   </AuxValues>
 
   <Layout>
@@ -107,44 +108,44 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="orbitVelLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="escVelLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="gForceLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="trajTypeLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="orbitVelField" pref="127" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                      <Component id="escVelField" pref="126" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="gForceField" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="trajTypeField" alignment="1" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Component id="gForceUnitLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="escVelUnitLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="orbitVelUnitLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                                      <Component id="pathTypeLabel" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="orbitImage" min="-2" pref="170" max="-2" attributes="0"/>
-                                  <Component id="fallImage" min="-2" pref="170" max="-2" attributes="0"/>
-                                  <Component id="escImage" min="-2" pref="170" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="viewPrevButton" min="-2" pref="152" max="-2" attributes="0"/>
+                          <Component id="orbitVelLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="escVelLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="gForceLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="trajTypeLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="orbitVelField" min="-2" pref="127" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="escVelField" min="-2" pref="126" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="gForceField" min="-2" pref="127" max="-2" attributes="0"/>
+                          <Component id="trajTypeField" min="-2" pref="127" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="orbitVelUnitLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="escVelUnitLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="gForceUnitLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="101" pref="101" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="52" pref="52" max="-2" attributes="0"/>
+                              <Component id="pathTypeLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                              <Component id="escImage" min="-2" pref="170" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="fallImage" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="orbitImage" min="-2" pref="170" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                      <Component id="viewPrevButton" min="-2" pref="152" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
@@ -243,42 +244,34 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="orbitVelField" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="orbitVelUnitLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="escVelUnitLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="escVelField" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="gForceField" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                              <Component id="gForceUnitLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="orbitVelField" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                      <Component id="escVelField" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                      <Component id="gForceField" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                       <Component id="trajTypeField" min="-2" pref="36" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                      <Component id="orbitVelUnitLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                      <Component id="escVelUnitLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
+                      <Component id="gForceUnitLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="pathTypeLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="orbitImage" min="-2" max="-2" attributes="0"/>
-                          <Component id="fallImage" min="-2" max="-2" attributes="0"/>
                           <Component id="escImage" min="-2" max="-2" attributes="0"/>
+                          <Component id="fallImage" min="-2" max="-2" attributes="0"/>
+                          <Component id="orbitImage" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
               <Component id="viewPrevButton" min="-2" pref="40" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -434,7 +427,7 @@
     <Component class="javax.swing.JButton" name="calcButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Calculate"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="toolTipText" type="java.lang.String" value="Calculate!!"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calcButtonActionPerformed"/>
@@ -443,6 +436,7 @@
     <Component class="javax.swing.JLabel" name="pathTypeLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Path Type"/>
+        <Property name="toolTipText" type="java.lang.String" value="The path that the projectile takes."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="gUnitLabel">
@@ -511,6 +505,7 @@
           <Image iconType="2" name="/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/fallback.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
+        <Property name="toolTipText" type="java.lang.String" value="The ball will fall back to the planet&apos;s surface."/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="fallImage"/>
@@ -522,6 +517,7 @@
           <Image iconType="2" name="/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/orbit.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
+        <Property name="toolTipText" type="java.lang.String" value="The ball will orbit around the planet."/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="orbitImage"/>
@@ -534,6 +530,7 @@
           <Image iconType="2" name="/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/exorbit.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
+        <Property name="toolTipText" type="java.lang.String" value="The ball will escape orbit, never to be seen again."/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="escImage"/>
