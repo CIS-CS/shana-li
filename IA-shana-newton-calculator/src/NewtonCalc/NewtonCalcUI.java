@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author sl3252
  */
-public class Interface extends javax.swing.JFrame {
+public class NewtonCalcUI extends javax.swing.JFrame {
     
     private double initVel = 0;
     private double mass = 0;
@@ -35,7 +35,7 @@ public class Interface extends javax.swing.JFrame {
      * Creates new form Interface
      * @throws java.lang.Exception
      */
-    public Interface() throws Exception {
+    public NewtonCalcUI() throws Exception {
         
         initComponents();
         clearImages();
@@ -133,6 +133,8 @@ public class Interface extends javax.swing.JFrame {
         radiusLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         radiusLabel.setText("Radius of Planet");
 
+        radiusField.setToolTipText("The radius of the planet (6371km for Earth).");
+
         massLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         massLabel.setText("Mass of Planet");
 
@@ -152,24 +154,28 @@ public class Interface extends javax.swing.JFrame {
         orbitVelLabel.setText("Orbital Velocity");
 
         orbitVelField.setBackground(new java.awt.Color(204, 204, 204));
+        orbitVelField.setToolTipText("The minimum projectile speed (less than esc. v) for a steady orbit.");
 
         escVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         escVelLabel.setText("Escape Velocity");
 
         escVelField.setBackground(new java.awt.Color(204, 204, 204));
+        escVelField.setToolTipText("The minimum projectile speed to escape the gravitational field.");
 
         gForceLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         gForceLabel.setText("Gravitational Force");
 
         gForceField.setBackground(new java.awt.Color(204, 204, 204));
+        gForceField.setToolTipText("Gravitational force of the planet.");
 
         trajTypeLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         trajTypeLabel.setText("Trajectory Type");
 
         trajTypeField.setBackground(new java.awt.Color(204, 204, 204));
-        trajTypeField.setToolTipText("skdljflkdsjflksdj");
+        trajTypeField.setToolTipText("Whether the projectile falls back to the planet, orbits the planet, or escapes orbit.");
 
         calcButton.setText("Calculate");
+        calcButton.setToolTipText("");
         calcButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calcButtonActionPerformed(evt);
@@ -195,6 +201,7 @@ public class Interface extends javax.swing.JFrame {
 
         viewPrevButton.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         viewPrevButton.setText("View Previous Entries");
+        viewPrevButton.setToolTipText("Veiw a list of your previous 10 entries.");
         viewPrevButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewPrevButtonActionPerformed(evt);
@@ -485,15 +492,16 @@ public class Interface extends javax.swing.JFrame {
             radius = Math.round(Double.parseDouble(radiusField.getText()) * 100.0) / 100.0;
         }
 
-        if (initVel == 0 || initVel > 1000000000 || mass == 0 || mass > Math.pow(10, 50) 
-                || g == 0 || g > Math.pow(10, 10) || radius == 0 || radius > 500000) {  
+        if (initVel <= 0 || initVel > 1000000000 || mass < Math.pow(10, 5) || mass > Math.pow(10, 50) 
+                || g < Math.pow(10, -20) || g > Math.pow(10, -5) || radius <= 0 || radius > 500000) {  
             
             JOptionPane.showMessageDialog(null,"Fields cannot be zero, too small, or too big. \n"
-                    + "The limits to the values are as follows: \n \n"
-                    + "Initial Velocity: 1000000000 m/s \n"
-                    + "Mass: 10^30 kg \n"
-                    + "G: 10^5 N⋅m2/kg2 \n"
-                    + "Radius: 500000 km"
+                    + "Values that are too small may lead to inaccurately rounded results. \n"
+                    + "The range (inclusive) of calculable values are as follows: \n \n"
+                    + "Initial Velocity: 1 - 1000000000 m/s \n"
+                    + "Mass: 10^5 - 10^30 kg \n"
+                    + "G: 10^-20 - 10^-5 N⋅m2/kg2 \n"
+                    + "Radius: 1 - 500000 km"
                     ,"Invalid Data", JOptionPane.WARNING_MESSAGE);
             
             throw new Exception();
@@ -532,7 +540,7 @@ public class Interface extends javax.swing.JFrame {
             queue.add(universe);
         } 
         catch (Exception ex) {
-            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_calcButtonActionPerformed
 
@@ -551,7 +559,7 @@ public class Interface extends javax.swing.JFrame {
                 persister.clear();
             } 
             catch (IOException ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
             }
             
             if(!queue.getEmptiness()) {
@@ -560,7 +568,7 @@ public class Interface extends javax.swing.JFrame {
                         persister.write(queue.dq());
                     } 
                     catch (IOException ex) {
-                        Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }
@@ -590,17 +598,18 @@ public class Interface extends javax.swing.JFrame {
             }
         } catch (ClassNotFoundException | InstantiationException | 
                 IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NewtonCalcUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
             try {
-                new Interface().setVisible(true);
+                new NewtonCalcUI().setVisible(true);
             } 
             catch (Exception ex) {
-                Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
     }
