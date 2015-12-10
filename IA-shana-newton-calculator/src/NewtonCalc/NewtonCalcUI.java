@@ -6,8 +6,6 @@
 package NewtonCalc;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -143,7 +141,7 @@ public class NewtonCalcUI extends javax.swing.JFrame {
 
         massPowField.setToolTipText("The mass of the planet from which the ball is fired, in scientific notation.");
 
-        gBaseField.setToolTipText("The Universal Gravitational Constant of the planet. On Earth it is about 6.67 x 10^-11.");
+        gBaseField.setToolTipText("The Universal Gravitational Constant of the planet. In our universe it is about 6.67 x 10^-11.");
 
         initVelField.setToolTipText("The initial firing velocity of the cannonball, horizontally to the Earth's surface.");
 
@@ -213,19 +211,19 @@ public class NewtonCalcUI extends javax.swing.JFrame {
 
         massUniteLabel.setText("kg");
 
-        fallImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/fallback.png")); // NOI18N
+        fallImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NewtonCalc/fallback.png"))); // NOI18N
         fallImage.setText("jLabel17");
         fallImage.setToolTipText("The ball will fall back to the planet's surface.");
 
-        orbitImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/orbit.png")); // NOI18N
+        orbitImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NewtonCalc/orbit.png"))); // NOI18N
         orbitImage.setText("jLabel17");
         orbitImage.setToolTipText("The ball will orbit around the planet.");
 
-        escImage.setIcon(new javax.swing.ImageIcon("/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/exorbit.png")); // NOI18N
+        escImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NewtonCalc/exorbit.png"))); // NOI18N
         escImage.setText("jLabel17");
         escImage.setToolTipText("The ball will escape orbit, never to be seen again.");
 
-        gPowField.setToolTipText("The Universal Gravitational Constant of the planet. On Earth it is about 6.67 x 10^-11.");
+        gPowField.setToolTipText("The Universal Gravitational Constant of the planet. In our universe it is about 6.67 x 10^-11.");
 
         massPowLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         massPowLabel1.setText("x 10^");
@@ -308,14 +306,12 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                             .addComponent(gForceUnitLabel))
                         .addGap(101, 101, 101)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(escImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(orbitImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
                                 .addComponent(pathTypeLabel))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addComponent(escImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(fallImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(orbitImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(fallImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -410,14 +406,18 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                         .addGap(24, 24, 24)
                         .addComponent(gForceUnitLabel))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(pathTypeLabel)
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(escImage)
-                            .addComponent(fallImage)
-                            .addComponent(orbitImage))))
+                        .addGap(10, 10, 10)
+                        .addComponent(escImage))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(orbitImage))
+                    .addComponent(pathTypeLabel)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(fallImage)))
+                .addGap(10, 10, 10)
                 .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addGap(17, 17, 17))
         );
 
         fallImage.getAccessibleContext().setAccessibleName("fallImage");
@@ -462,15 +462,13 @@ public class NewtonCalcUI extends javax.swing.JFrame {
         }
     }
     
-    private void checkValues() throws Exception {        
+    private void checkValues() {        
         if ("".equals(initVelField.getText()) || "".equals(massBaseField.getText()) 
         || "".equals(massPowField.getText()) || "".equals(gBaseField.getText()) 
         || "".equals(gPowField.getText()) || "".equals(radiusField.getText())){
             JOptionPane.showMessageDialog(null,"Fields cannot remain blank. "
                     + "Please fill out all the information.","Invalid Data",
                     JOptionPane.WARNING_MESSAGE);
-            
-            throw new Exception();
         }
                 
         if (!isNumeric(initVelField.getText()) || !isNumeric(massBaseField.getText()) || 
@@ -479,8 +477,6 @@ public class NewtonCalcUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Fields must be numeric. \n"
                 + "Power fields must contain integers.",
                 "Invalid Data", JOptionPane.WARNING_MESSAGE);
-            
-            throw new Exception();
         } 
         else {
             initVel = Math.round(Double.parseDouble(initVelField.getText()) * 100.0) / 100.0;
@@ -504,8 +500,6 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                     + "G: 10^-20 - 10^-5 N⋅m2/kg2 \n"
                     + "Radius: 1 - 500000 km"
                     ,"Invalid Data", JOptionPane.WARNING_MESSAGE);
-            
-            throw new Exception();
         } 
         else {
             initVelField.setText(String.valueOf(initVel));
@@ -541,8 +535,7 @@ public class NewtonCalcUI extends javax.swing.JFrame {
             try {
                 persister.clear();
             } 
-            catch (IOException ex) {
-                Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
+            catch (IOException e) {
             }
             
             if(!queue.getEmptiness()) {
@@ -550,8 +543,7 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                     try {
                         persister.write(queue.dq());
                     } 
-                    catch (IOException ex) {
-                        Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
+                    catch (IOException e) {
                     }
                 }
             }
@@ -575,8 +567,7 @@ public class NewtonCalcUI extends javax.swing.JFrame {
             displayValues(universe);
             queue.add(universe);
         }
-        catch (Exception ex) {
-            Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
+        catch (Exception e) {
         }
     }//GEN-LAST:event_calcButtonActionPerformed
 
@@ -610,7 +601,6 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                 new NewtonCalcUI().setVisible(true);
             } 
             catch (Exception ex) {
-                Logger.getLogger(NewtonCalcUI.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
     }

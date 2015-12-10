@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 // For reading from the file
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 
 // Other I/O stuff
 import java.io.IOException;

@@ -41,7 +41,6 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,4,0,0,2,-121"/>
   </AuxValues>
 
   <Layout>
@@ -131,16 +130,13 @@
                       </Group>
                       <EmptySpace min="101" pref="101" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="escImage" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="orbitImage" min="-2" pref="170" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="52" pref="52" max="-2" attributes="0"/>
                               <Component id="pathTypeLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                              <Component id="escImage" min="-2" pref="170" max="-2" attributes="0"/>
-                          </Group>
                           <Component id="fallImage" min="-2" pref="170" max="-2" attributes="0"/>
-                          <Component id="orbitImage" min="-2" pref="170" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
@@ -261,17 +257,22 @@
                       <Component id="gForceUnitLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="pathTypeLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="escImage" min="-2" max="-2" attributes="0"/>
-                          <Component id="fallImage" min="-2" max="-2" attributes="0"/>
-                          <Component id="orbitImage" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="escImage" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="orbitImage" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="pathTypeLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="fallImage" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
               <Component id="viewPrevButton" min="-2" pref="40" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -339,7 +340,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="gBaseField">
       <Properties>
-        <Property name="toolTipText" type="java.lang.String" value="The Universal Gravitational Constant of the planet. On Earth it is about 6.67 x 10^-11."/>
+        <Property name="toolTipText" type="java.lang.String" value="The Universal Gravitational Constant of the planet. In our universe it is about 6.67 x 10^-11."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="initVelField">
@@ -502,7 +503,7 @@
     <Component class="javax.swing.JLabel" name="fallImage">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/fallback.png"/>
+          <Image iconType="3" name="/NewtonCalc/fallback.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
         <Property name="toolTipText" type="java.lang.String" value="The ball will fall back to the planet&apos;s surface."/>
@@ -514,7 +515,7 @@
     <Component class="javax.swing.JLabel" name="orbitImage">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/orbit.png"/>
+          <Image iconType="3" name="/NewtonCalc/orbit.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
         <Property name="toolTipText" type="java.lang.String" value="The ball will orbit around the planet."/>
@@ -527,7 +528,7 @@
     <Component class="javax.swing.JLabel" name="escImage">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/sl3252/Dropbox/shana-li-y12/shana-li-repo/IA-shana-newton-calculator/exorbit.png"/>
+          <Image iconType="3" name="/NewtonCalc/exorbit.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
         <Property name="toolTipText" type="java.lang.String" value="The ball will escape orbit, never to be seen again."/>
@@ -538,7 +539,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="gPowField">
       <Properties>
-        <Property name="toolTipText" type="java.lang.String" value="The Universal Gravitational Constant of the planet. On Earth it is about 6.67 x 10^-11."/>
+        <Property name="toolTipText" type="java.lang.String" value="The Universal Gravitational Constant of the planet. In our universe it is about 6.67 x 10^-11."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="massPowLabel1">
