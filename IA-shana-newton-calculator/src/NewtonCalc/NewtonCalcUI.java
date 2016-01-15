@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sl3252
+ * @author Shana Li
  */
 public class NewtonCalcUI extends javax.swing.JFrame {
     
@@ -118,59 +118,81 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                 formWindowClosing(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         gLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         gLabel.setText("Univ. G Constant");
+        getContentPane().add(gLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         inputLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         inputLabel.setText("Input");
+        getContentPane().add(inputLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 60, 30));
 
         initVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         initVelLabel.setText("Initial Velocity");
+        getContentPane().add(initVelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         radiusLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         radiusLabel.setText("Radius of Planet");
+        getContentPane().add(radiusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 130, -1, -1));
 
         radiusField.setToolTipText("The radius of the planet (6371km for Earth).");
+        getContentPane().add(radiusField, new org.netbeans.lib.awtextra.AbsoluteConstraints(479, 121, 83, 36));
 
         massLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         massLabel.setText("Mass of Planet");
+        getContentPane().add(massLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(363, 89, -1, -1));
 
         titleLabel.setFont(new java.awt.Font("Lucida Grande", 0, 22)); // NOI18N
         titleLabel.setText("Newton's Cannonball Calculator");
+        getContentPane().add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        getContentPane().add(inputSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 50, 565, -1));
 
         massPowField.setToolTipText("The mass of the planet from which the ball is fired, in scientific notation.");
+        getContentPane().add(massPowField, new org.netbeans.lib.awtextra.AbsoluteConstraints(566, 80, 40, 36));
 
         gBaseField.setToolTipText("The Universal Gravitational Constant of the planet. In our universe it is about 6.67 x 10^-11.");
+        getContentPane().add(gBaseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 121, 52, 36));
 
         initVelField.setToolTipText("The initial firing velocity of the cannonball, horizontally to the Earth's surface.");
+        getContentPane().add(initVelField, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 84, 83, 36));
 
         outputLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         outputLabel.setText("Output");
+        getContentPane().add(outputLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 70, 30));
+        getContentPane().add(outputSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 560, -1));
 
         orbitVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         orbitVelLabel.setText("Orbital Velocity");
+        getContentPane().add(orbitVelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 284, -1, -1));
 
         orbitVelField.setBackground(new java.awt.Color(204, 204, 204));
         orbitVelField.setToolTipText("The minimum projectile speed (less than esc. v) for a steady orbit.");
+        getContentPane().add(orbitVelField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 274, 127, 36));
 
         escVelLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         escVelLabel.setText("Escape Velocity");
+        getContentPane().add(escVelLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 324, -1, -1));
 
         escVelField.setBackground(new java.awt.Color(204, 204, 204));
         escVelField.setToolTipText("The minimum projectile speed to escape the gravitational field.");
+        getContentPane().add(escVelField, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 314, 126, 36));
 
         gForceLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         gForceLabel.setText("Gravitational Force");
+        getContentPane().add(gForceLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 364, -1, -1));
 
         gForceField.setBackground(new java.awt.Color(204, 204, 204));
         gForceField.setToolTipText("Gravitational force of the planet.");
+        getContentPane().add(gForceField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 354, 127, 36));
 
         trajTypeLabel.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         trajTypeLabel.setText("Trajectory Type");
+        getContentPane().add(trajTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 404, -1, -1));
 
         trajTypeField.setBackground(new java.awt.Color(204, 204, 204));
         trajTypeField.setToolTipText("Whether the projectile falls back to the planet, orbits the planet, or escapes orbit.");
+        getContentPane().add(trajTypeField, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 394, 127, 36));
 
         calcButton.setText("Calculate");
         calcButton.setToolTipText("Calculate!!");
@@ -179,24 +201,33 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                 calcButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(calcButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 90, 40));
 
         pathTypeLabel.setText("Path Type");
         pathTypeLabel.setToolTipText("The path that the projectile takes.");
+        getContentPane().add(pathTypeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 260, -1, -1));
 
         gUnitLabel.setText("N⋅m2/kg2");
+        getContentPane().add(gUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 129, -1, 20));
 
         initVelUnitLabel.setText("m/s");
+        getContentPane().add(initVelUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 94, -1, -1));
 
         massPowLabel.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         massPowLabel.setText("x 10^");
+        getContentPane().add(massPowLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 129, -1, 20));
 
         radiusUnitLabel.setText("km");
+        getContentPane().add(radiusUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 131, -1, -1));
 
         orbitVelUnitLabel.setText("m/s");
+        getContentPane().add(orbitVelUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 284, -1, -1));
 
         escVelUnitLabel.setText("m/s");
+        getContentPane().add(escVelUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 324, -1, -1));
 
         gForceUnitLabel.setText("N");
+        getContentPane().add(gForceUnitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 364, -1, -1));
 
         viewPrevButton.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         viewPrevButton.setText("View Previous Entries");
@@ -206,224 +237,39 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                 viewPrevButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(viewPrevButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 152, 40));
 
         massBaseField.setToolTipText("The mass of the planet from which the ball is fired, in scientific notation.");
+        getContentPane().add(massBaseField, new org.netbeans.lib.awtextra.AbsoluteConstraints(479, 80, 40, 36));
 
         massUniteLabel.setText("kg");
+        getContentPane().add(massUniteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 88, -1, 20));
 
         fallImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NewtonCalc/fallback.png"))); // NOI18N
-        fallImage.setText("jLabel17");
+        fallImage.setText("[fallimage]");
         fallImage.setToolTipText("The ball will fall back to the planet's surface.");
+        getContentPane().add(fallImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 170, -1));
+        fallImage.getAccessibleContext().setAccessibleName("fallImage");
 
         orbitImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NewtonCalc/orbit.png"))); // NOI18N
-        orbitImage.setText("jLabel17");
+        orbitImage.setText("[orbitimage]");
         orbitImage.setToolTipText("The ball will orbit around the planet.");
+        getContentPane().add(orbitImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 170, -1));
+        orbitImage.getAccessibleContext().setAccessibleName("orbitImage");
+        orbitImage.getAccessibleContext().setAccessibleDescription("");
 
         escImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/NewtonCalc/exorbit.png"))); // NOI18N
-        escImage.setText("jLabel17");
+        escImage.setText("[escimage]");
         escImage.setToolTipText("The ball will escape orbit, never to be seen again.");
+        getContentPane().add(escImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 170, -1));
+        escImage.getAccessibleContext().setAccessibleName("escImage");
 
         gPowField.setToolTipText("The Universal Gravitational Constant of the planet. In our universe it is about 6.67 x 10^-11.");
+        getContentPane().add(gPowField, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 121, 39, 36));
 
         massPowLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         massPowLabel1.setText("x 10^");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(titleLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(inputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(inputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(initVelLabel)
-                        .addGap(25, 25, 25)
-                        .addComponent(initVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(initVelUnitLabel)
-                        .addGap(108, 108, 108)
-                        .addComponent(massLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(massBaseField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(massPowLabel1)
-                        .addGap(6, 6, 6)
-                        .addComponent(massPowField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(massUniteLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(gLabel)
-                        .addGap(6, 6, 6)
-                        .addComponent(gBaseField, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(massPowLabel)
-                        .addGap(6, 6, 6)
-                        .addComponent(gPowField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(gUnitLabel)
-                        .addGap(12, 12, 12)
-                        .addComponent(radiusLabel)
-                        .addGap(6, 6, 6)
-                        .addComponent(radiusField, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(radiusUnitLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(calcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(outputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitVelLabel)
-                            .addComponent(escVelLabel)
-                            .addComponent(gForceLabel)
-                            .addComponent(trajTypeLabel))
-                        .addGap(11, 11, 11)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(trajTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(orbitVelUnitLabel)
-                            .addComponent(escVelUnitLabel)
-                            .addComponent(gForceUnitLabel))
-                        .addGap(101, 101, 101)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(escImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(orbitImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(pathTypeLabel))
-                            .addComponent(fallImage, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(6, 6, 6))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(titleLabel)
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(inputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(initVelLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(initVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(initVelUnitLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(massLabel))
-                    .addComponent(massBaseField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(massPowLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(massPowField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(massUniteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(1, 1, 1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(gLabel))
-                    .addComponent(gBaseField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(massPowLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(gPowField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(gUnitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(radiusLabel))
-                    .addComponent(radiusField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(radiusUnitLabel)))
-                .addGap(3, 3, 3)
-                .addComponent(calcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(outputSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(orbitVelLabel)
-                        .addGap(23, 23, 23)
-                        .addComponent(escVelLabel)
-                        .addGap(23, 23, 23)
-                        .addComponent(gForceLabel)
-                        .addGap(23, 23, 23)
-                        .addComponent(trajTypeLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(orbitVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(escVelField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(gForceField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(trajTypeField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(orbitVelUnitLabel)
-                        .addGap(24, 24, 24)
-                        .addComponent(escVelUnitLabel)
-                        .addGap(24, 24, 24)
-                        .addComponent(gForceUnitLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(escImage))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(orbitImage))
-                    .addComponent(pathTypeLabel)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(fallImage)))
-                .addGap(10, 10, 10)
-                .addComponent(viewPrevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-
-        fallImage.getAccessibleContext().setAccessibleName("fallImage");
-        orbitImage.getAccessibleContext().setAccessibleName("orbitImage");
-        orbitImage.getAccessibleContext().setAccessibleDescription("");
-        escImage.getAccessibleContext().setAccessibleName("escImage");
+        getContentPane().add(massPowLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 88, -1, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -462,18 +308,27 @@ public class NewtonCalcUI extends javax.swing.JFrame {
         }
     }
     
-    private void checkValues() {        
+    private boolean checkValues() {    
+        
+        boolean isDataValid = true;
+        
         if ("".equals(initVelField.getText()) || "".equals(massBaseField.getText()) 
         || "".equals(massPowField.getText()) || "".equals(gBaseField.getText()) 
         || "".equals(gPowField.getText()) || "".equals(radiusField.getText())){
+            
+            isDataValid = false;
+            
             JOptionPane.showMessageDialog(null,"Fields cannot remain blank. "
                     + "Please fill out all the information.","Invalid Data",
                     JOptionPane.WARNING_MESSAGE);
         }
                 
-        if (!isNumeric(initVelField.getText()) || !isNumeric(massBaseField.getText()) || 
+        else if (!isNumeric(initVelField.getText()) || !isNumeric(massBaseField.getText()) || 
                 !isInt(massPowField.getText()) || !isNumeric(gBaseField.getText()) || 
                 !isInt(gPowField.getText()) || !isNumeric(radiusField.getText())) {
+            
+            isDataValid = false;
+            
             JOptionPane.showMessageDialog(null,"Fields must be numeric. \n"
                 + "Power fields must contain integers.",
                 "Invalid Data", JOptionPane.WARNING_MESSAGE);
@@ -487,12 +342,13 @@ public class NewtonCalcUI extends javax.swing.JFrame {
             gPow = Integer.parseInt(gPowField.getText());
             g = (Math.round(gBase * 100.0) / 100.0) * Math.pow(10, gPow);
             radius = Math.round(Double.parseDouble(radiusField.getText()) * 100.0) / 100.0;
-        }
-
-        if (initVel <= 0 || initVel > 1000000000 || mass < Math.pow(10, 5) || mass > Math.pow(10, 50) 
-                || g < Math.pow(10, -20) || g > Math.pow(10, -5) || radius <= 0 || radius > 500000) {  
             
-            JOptionPane.showMessageDialog(null,"Fields cannot be zero, too small, or too big. \n"
+            if (initVel <= 0 || initVel > 1000000000 || mass < Math.pow(10, 5) || mass > Math.pow(10, 50) 
+                || g < Math.pow(10, -20) || g > Math.pow(10, -5) || radius <= 0 || radius > 500000) { 
+                
+                isDataValid = false;
+            
+                JOptionPane.showMessageDialog(null,"Fields cannot be zero, too small, or too big. \n"
                     + "Values that are too small may lead to inaccurately rounded results. \n"
                     + "The range (inclusive) of calculable values are as follows: \n \n"
                     + "Initial Velocity: 1 - 1000000000 m/s \n"
@@ -500,11 +356,14 @@ public class NewtonCalcUI extends javax.swing.JFrame {
                     + "G: 10^-20 - 10^-5 N⋅m2/kg2 \n"
                     + "Radius: 1 - 500000 km"
                     ,"Invalid Data", JOptionPane.WARNING_MESSAGE);
-        } 
-        else {
-            initVelField.setText(String.valueOf(initVel));
-            radiusField.setText(String.valueOf(radius));
+            } 
+            else {
+                initVelField.setText(String.valueOf(initVel));
+                radiusField.setText(String.valueOf(radius));
+            }
         }
+        
+        return isDataValid;
     }
     
     private void displayValues(Universe universe) {       
@@ -560,14 +419,11 @@ public class NewtonCalcUI extends javax.swing.JFrame {
     }//GEN-LAST:event_viewPrevButtonActionPerformed
 
     private void calcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcButtonActionPerformed
-        try {
-            checkValues();
+        if (checkValues()) {
             clearImages();
             Universe universe = new Universe(initVel, g, massBase, massPow, mass, radius);
             displayValues(universe);
             queue.add(universe);
-        }
-        catch (Exception e) {
         }
     }//GEN-LAST:event_calcButtonActionPerformed
 
